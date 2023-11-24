@@ -1,7 +1,7 @@
 
-# Clock
+# Digital Clock
 
-Live Demo: https://mechapear.github.io/watch-react/
+Live Demo: https://mechapear.github.io/clock-react/
 
 ![App Screenshot](screenshot1.png)
 
