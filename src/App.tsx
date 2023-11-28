@@ -57,31 +57,31 @@ export default function App() {
 
   return (
     <>
-      <div className="fixed top-5 right-5 duration-100">
+      <div className="fixed right-5 top-5 duration-100">
         <button
-          className="w-8 h-8 m-1 bg-gray-200 dark:bg-gray-300 text-gray-900 dark:text-gray-700 dark:border-gray-400 grid place-content-center rounded-full ring-1 ring-inset ring-black/10 shadow"
+          className="m-1 grid h-8 w-8 place-content-center rounded-full bg-gray-200 text-gray-900 shadow ring-1 ring-inset ring-black/10 dark:border-gray-400 dark:bg-gray-300 dark:text-gray-700"
           onClick={handleChangeTheme}
         >
           {isDarkMode ? <SunIcon /> : <MoonIcon />}
         </button>
       </div>
 
-      <div className="text-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 ">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center ">
         <div className="text-sm font-medium text-gray-900 dark:text-gray-300">
           {day}
         </div>
-        <div className="text-3xl md:text-4xl font-semibold mt-3 mb-7 text-gray-900 dark:text-gray-300">
+        <div className="mb-7 mt-3 text-3xl font-semibold text-gray-900 dark:text-gray-300 md:text-4xl">
           {time}
         </div>
         <div>
-          <label className="relative inline-flex items-center mb-5 cursor-pointer">
+          <label className="relative mb-5 inline-flex cursor-pointer items-center">
             <input
-              className="sr-only peer"
+              className="peer sr-only"
               type="checkbox"
               onChange={() => setIs24Hour((prevIs24Hour) => !prevIs24Hour)}
               checked={is24Hour}
             />
-            <div className="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+            <div className="peer h-5 w-9 rounded-full bg-gray-200 after:absolute after:start-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 rtl:peer-checked:after:-translate-x-full dark:border-gray-600 dark:bg-gray-700 dark:peer-focus:ring-blue-800"></div>
             <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
               24-hour time
             </span>
